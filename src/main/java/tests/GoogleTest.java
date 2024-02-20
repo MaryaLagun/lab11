@@ -1,6 +1,7 @@
 package tests;
 
 import basepage.*;
+import io.qameta.allure.Allure;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -11,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.asserts.SoftAssert;
 
+import java.io.ByteArrayInputStream;
 import java.util.List;
 
 public class GoogleTest extends BaseTest {
@@ -19,9 +21,10 @@ public class GoogleTest extends BaseTest {
     @Test
     public void googlesTest() {
 
-        googlePage.openURL();
+        googlePage.getGoogle();
         googlePage.setSearch("уточка"+ Keys.ENTER);
 
+        BaseTest.takeScreen();
 
     }
 

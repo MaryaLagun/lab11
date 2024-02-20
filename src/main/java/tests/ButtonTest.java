@@ -2,6 +2,12 @@ package tests;
 
 import basepage.HomePage;
 import basepage.HomePageButton;
+import com.codeborne.selenide.ElementsCollection;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import jdk.jfr.Description;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -15,13 +21,17 @@ import java.util.List;
 public class ButtonTest extends BaseTest {
     private static final String EXPECTED_URL = "https://the-internet.herokuapp.com/";
     HomePageButton homePage = new HomePageButton();
-
+Logger log= LogManager.getLogger(ButtonTest.class);
     @Test
+    @Description("Добавление")
+    @Epic("Epicccc")
+    @Feature("alarm!!!")
     public void locatorTest() {
+       log.info("test1");
         homePage.openURL();
         homePage.clickABTestingLink("Add/Remove Elements");
-        homePage.addElement(4);
-        List<WebElement> actualList=homePage.getDeleteButtonList();
+      homePage.addElement(4);
+       ElementsCollection actualList=homePage.getDeleteButtonList();
         Assert.assertTrue(actualList.size()==4);
     }
     @Test
@@ -29,13 +39,13 @@ public class ButtonTest extends BaseTest {
         homePage.openURL();
         homePage.clickABTestingLink("Add/Remove Elements");
         homePage.addElement(8);
-        List<WebElement> actualList=homePage.getDeleteButtonList();
+        ElementsCollection actualList=homePage.getDeleteButtonList();
         Assert.assertTrue(actualList.size()==8);
 
         for (WebElement element: actualList){
            element.click();
         }
-        List<WebElement> afterDelete=homePage.getDeleteButtonList();
+        ElementsCollection afterDelete=homePage.getDeleteButtonList();
         Assert.assertTrue(afterDelete.isEmpty());
     }
 }

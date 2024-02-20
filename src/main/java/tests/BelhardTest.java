@@ -1,6 +1,7 @@
 package tests;
 
 import basepage.*;
+import io.qameta.allure.Step;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -15,11 +16,11 @@ import java.util.List;
 
 public class BelhardTest extends BaseTest {
     BelhardPage belhardPage = new BelhardPage();
-
+  //  @Step
     @Test
     public void belhardTest() {
 
-        belhardPage.openURL();
+        belhardPage.getBelhardPage();
         belhardPage.getAnaliticExperience();
 
 

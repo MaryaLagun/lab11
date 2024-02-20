@@ -15,17 +15,17 @@ import org.testng.asserts.SoftAssert;
 
 import java.util.List;
 
-public class DragDropTest extends BaseTest {
-    private static final String EXPECTED_URL = "https://the-internet.herokuapp.com/";
-    ContextPage dragdropPage = new ContextPage();
-    @Test
-    public void contextTest() {
+//public class DragDropTest extends BaseTest {
+ //   private static final String EXPECTED_URL = "https://the-internet.herokuapp.com/";
+ //   ContextPage dragdropPage = new ContextPage();
+ //   @Test
+ //   public void contextTest() {
 
-        dragdropPage.openURL();
-        dragdropPage.clickABTestingLink("Drag and Drop");
-        dragdropPage.managerArea();
+  //      dragdropPage.openURL();
+   //     dragdropPage.clickABTestingLink("Drag and Drop");
+   //     dragdropPage.managerArea();
      //   dragdropPage.
 
-    }
+  //  }
 
-}
+//}

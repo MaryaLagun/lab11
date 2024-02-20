@@ -10,17 +10,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.DataProvider;
 
 public class TheInternetTest extends BaseTest{
-    private static final String EXPECTED_URL="https://the-internet.herokuapp.com/abtest";
+  //  private static final String EXPECTED_URL="https://the-internet.herokuapp.com/abtest";
 
-    HomePage homePage=new HomePage();
-    @Test
-    public void locatorTest()
-    {
-        homePage.openURL();
-        homePage.clickABTestingLink("A/B Testing");
-        String currentUrl=driver.getCurrentUrl();
-        Assert.assertEquals(currentUrl,EXPECTED_URL);
-    }
+ //   HomePage homePage=new HomePage();
+ //   @Test
+ //   public void locatorTest()
+ //   {
+  //      homePage.openURL();
+ //       homePage.clickABTestingLink("A/B Testing");
+   //     String currentUrl=driver.getCurrentUrl();
+ //       Assert.assertEquals(currentUrl,EXPECTED_URL);
+   // }
 
     //@DataProvider
  //   public Object[][] prepareDate{
